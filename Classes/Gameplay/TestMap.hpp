@@ -8,17 +8,20 @@
 #ifndef TESTMAP_HPP_
 #define TESTMAP_HPP_
 
-#include "cocos2d.h"
-#include "Player.hpp"
-#include "HUD.hpp"
+#include <cocos2d.h>
 
-using namespace cocos2d;
+class Player;
+class HUD;
+class Camera;
+
+
+USING_NS_CC;
 
 class TestMap : public CCLayer
 {
 
 public:
-
+	TestMap();
 	~TestMap();
 	static CCScene* scene();
 	bool init();
@@ -27,6 +30,7 @@ public:
 
 private:
 	void loadMap();
+	void loadHUD();
 	void setCameraOn(CCPoint position);
 
 	//
@@ -36,6 +40,7 @@ private:
 	CCTMXTiledMap* _tileMap;
 	Player* _player;
 	HUD* _hud;
+	Camera* _camera;
 };
 
 #endif /* TESTMAP_HPP_ */

@@ -37,8 +37,8 @@ void Player::setJoystick(Joystick* joystick)
 void Player::move(CCPoint direction)
 {
 	float dt = CCDirector::sharedDirector()->getDeltaTime();
-
 	CCPoint pos = getPosition();
+
 	setPositionX(pos.x + direction.x*kSpeedStep*dt);
 	setPositionY(pos.y + direction.y*kSpeedStep*dt);
 }

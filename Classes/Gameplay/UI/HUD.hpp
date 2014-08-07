@@ -19,6 +19,8 @@ using namespace gui;
 class HUD : public CCLayer
 {
 public:
+	HUD();
+	~HUD();
 	bool init();
 
 	virtual bool ccTouchBegan(CCTouch *pTouch, CCEvent *pEvent);
@@ -35,6 +37,7 @@ private:
 	// Atributes
 	//
 	Joystick* _joystick;
+	UIButton* _menuButton;
 
 };
 

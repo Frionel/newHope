@@ -1,12 +1,10 @@
 #include "AppDelegate.h"
-//#include "HelloWorldScene.h"
 #include "TestMap.hpp"
 
 USING_NS_CC;
 
 AppDelegate::AppDelegate()
 {
-//	sleep(10);
 }
 
 AppDelegate::~AppDelegate() 
@@ -23,8 +21,8 @@ bool AppDelegate::applicationDidFinishLaunching()
 
 	// Initialize Screen region
 	CCSize screenSize = glView->getFrameSize();
-	CCSize designSize = CCSize(1280, 720);
-	glView->setDesignResolutionSize(designSize.width, designSize.height, kResolutionExactFit);
+	//CCSize designSize = CCSize(1280, 720);
+	//glView->setDesignResolutionSize(designSize.width, designSize.height, kResolutionExactFit);
 
 	//TODO: set hd/sd depending on the screenSize
 	

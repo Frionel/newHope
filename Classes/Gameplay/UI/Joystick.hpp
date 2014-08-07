@@ -11,13 +11,15 @@
 #include "cocos2d.h"
 #include "cocos-ext.h"
 
-using namespace cocos2d;
+USING_NS_CC;
 using namespace gui;
 
-class Joystick : public Widget
+
+class Joystick
 {
 public:
-	bool init(Widget* widget);
+	Joystick(Widget* widget);
+	~Joystick();
 
 	void touchBegan(CCTouch* pTouch);
 	void touchMoved(CCTouch* pTouch);
@@ -27,12 +29,14 @@ public:
 	CCPoint getDirection();
 
 private:
+	void init(Widget* widget);
 
 	//
 	// Attributes
 	//
-	UIImageView* _joystickMargin;
-	UIImageView* _joystickController;
+	Layout* _joystickNode;
+	ImageView* _margin;
+	ImageView* _controller;
 
 	CCPoint _direction;
 

@@ -1,74 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" width="20" height="20" tilewidth="32" tileheight="32">
- <tileset firstgid="1" name="tileset" tilewidth="32" tileheight="32">
-  <image source="terrain.png" trans="ff00ff" width="672" height="736"/>
-  <tile id="258">
+ <tileset firstgid="1" name="testmap_tileset" tilewidth="32" tileheight="32">
+  <image source="testmap_tileset.png" trans="ff00ff" width="256" height="256"/>
+  <tile id="0">
    <properties>
-    <property name="collision" value="1"/>
+    <property name="block" value="1"/>
    </properties>
   </tile>
-  <tile id="279">
+  <tile id="3">
    <properties>
-    <property name="collision" value="1"/>
+    <property name="block" value="1"/>
    </properties>
   </tile>
-  <tile id="365">
+  <tile id="10">
    <properties>
-    <property name="collision" value="1"/>
+    <property name="block" value="1"/>
    </properties>
   </tile>
-  <tile id="441">
+  <tile id="29">
    <properties>
-    <property name="collision" value=" 1"/>
+    <property name="block" value="1"/>
    </properties>
   </tile>
-  <tile id="442">
+  <tile id="30">
    <properties>
-    <property name="collision" value="1"/>
+    <property name="block" value="1"/>
    </properties>
   </tile>
-  <tile id="443">
+  <tile id="31">
    <properties>
-    <property name="collision" value="1"/>
+    <property name="block" value="1"/>
    </properties>
   </tile>
-  <tile id="462">
+  <tile id="37">
    <properties>
-    <property name="collision" value="1"/>
+    <property name="block" value="1"/>
    </properties>
   </tile>
-  <tile id="463">
+  <tile id="38">
    <properties>
-    <property name="collision" value="1"/>
+    <property name="block" value="1"/>
    </properties>
   </tile>
-  <tile id="464">
+  <tile id="39">
    <properties>
-    <property name="collision" value="1"/>
+    <property name="block" value="1"/>
    </properties>
   </tile>
  </tileset>
- <layer name="layer0" width="20" height="20">
-  <data encoding="base64" compression="zlib">
-   eJy1k9sNgzAMRYNadmiZpzuU7tCyYtfByhJNBJGurBvHNOLjCOV1bNlmGUJYKlwTo3F+hHfinpjAPe+Mao14csh3Xolv2HiqNYI5MM9svBWy58lJv2Me5vsQ12Wov/fkp2tViIYjn63EV3MdocxG/j6gXmuHz8qtuGt+UTVAl9U3T28zOF83R+08Mf8hkjg6FquRty+evCPE1d6eGbD+D3bWU2MxvLrOrTjSuIt7rfkV0uMz+AHazAe/
-  </data>
- </layer>
- <layer name="layer1" width="20" height="20">
-  <data encoding="base64" compression="zlib">
-   eJxjYBgFo2DwgmpGBoYaIK5lpI55E4DmTATiSVQybynQnGVAvJxK5p0HmnMBiC/iMY8aYbILqHc3EO9hpE6YILt7IMJkFAwMAABCYhPS
-  </data>
- </layer>
- <layer name="layer2" width="20" height="20">
-  <data encoding="base64" compression="zlib">
-   eJxjYBgFo2AUVDMyMNQAcS0jdcybADRnIhBPopJ5S4HmLAPi5VQybxSMAmoAALXZBSM=
-  </data>
- </layer>
- <layer name="details" width="20" height="20">
-  <data encoding="base64" compression="zlib">
-   eJxjYBgFo4B6oJ7G5n+msfkwQGt/UBvQOlx2A/EeIN6LJEZKGKGrvQDEF4H4EoXuQjZvEhA/J1I9ofACmUcttxFjHqnpDdk8asQ9uf4FAOIPE8A=
-  </data>
- </layer>
  <objectgroup name="events" width="20" height="20">
-  <object name="spawn" x="64" y="576"/>
+  <object name="spawn" x="51" y="496">
+   <properties>
+    <property name="z" value="0"/>
+   </properties>
+  </object>
  </objectgroup>
+ <layer name="terrain0" width="20" height="20">
+  <properties>
+   <property name="terrain" value="1"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjZGBgYBwAzATF+ORJMYcYPGoe6WbgM49cc9DNo9QceplHqf+HmvuolV6GSvyOFPOoiQHJkQKa
+  </data>
+ </layer>
+ <layer name="details0_1" width="20" height="20">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFgwGwkKBWDYjVgVgDB59e7qC1HTw0dcXwAaPhhAgD5LyAi00LgC1Nc+NQiy2+SI1DXHmIHvkXGQAAt74CqQ==
+  </data>
+ </layer>
+ <layer name="details0_2" width="20" height="20">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIKhDVgG2gEjFAAADCAABQ==
+  </data>
+ </layer>
+ <layer name="terrain1" width="20" height="20">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgF6IANiNmBmAMHn1QgBsTiQCyBgz8KRsFQAZTmBXSAnBfkgFgeiBXQ2PQCzHS0a7gAAFFzAcw=
+  </data>
+ </layer>
+ <layer name="details1_1" width="20" height="20">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjALiAc8gN28U0A8AADOgABk=
+  </data>
+ </layer>
+ <layer name="terrain2" width="20" height="20">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUDEbABsTsQMxBJfP4gJgfiAWoZJ4YEIsDsQQQywGxPBArUMnsUTA0AADlAwDl
+  </data>
+ </layer>
+ <layer name="terrain3" width="20" height="20">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUsAExOxBzUMk8PiDmB2KBQWqeGBCLA7EElcwbBSMTAADb3wC1
+  </data>
+ </layer>
 </map>

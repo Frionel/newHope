@@ -110,7 +110,7 @@
 		<link>
 			<name>Classes</name>
 			<type>2</type>
-			<locationURI>COCOS2DX/projects/NewProject/Classes</locationURI>
+			<locationURI>PROJECT_PATH/Classes</locationURI>
 		</link>
 		<link>
 			<name>cocos2dx</name>
@@ -131,7 +131,11 @@
 	<variableList>
 		<variable>
 			<name>COCOS2DX</name>
-			<value>file:/D:/cocos2d-x-2.2.2</value>
+			<value>file:/D:/GitHub/cocos2d-x-2.2.2</value>
+		</variable>
+		<variable>
+			<name>PROJECT_PATH</name>
+			<value>file:/D:/GitHub/NewProject</value>
 		</variable>
 	</variableList>
 </projectDescription>
