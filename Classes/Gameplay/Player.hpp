@@ -23,7 +23,7 @@ public:
 	void setJoystick(Joystick* joystick);
 
 private:
-	void move(CCPoint direction);
+	void move();
 
 	//
 	// Attributes

@@ -7,7 +7,8 @@
 
 #include "Player.hpp"
 
-#define kSpeedStep 110
+#define kSpeedWalk 55
+#define kSpeedRun 110
 
 
 
@@ -23,10 +24,7 @@ bool Player::init()
 
 void Player::update()
 {
-	if(_joystick->isActive())
-	{
-		move(_joystick->getDirection());
-	}
+	move();
 }
 
 void Player::setJoystick(Joystick* joystick)
@@ -34,11 +32,17 @@ void Player::setJoystick(Joystick* joystick)
 	_joystick = joystick;
 }
 
-void Player::move(CCPoint direction)
+void Player::move()
 {
-	float dt = CCDirector::sharedDirector()->getDeltaTime();
-	CCPoint pos = getPosition();
+	if(!_joystick->isActive())
+		return;
 
-	setPositionX(pos.x + direction.x*kSpeedStep*dt);
-	setPositionY(pos.y + direction.y*kSpeedStep*dt);
+	float dt = CCDirector::sharedDirector()->getDeltaTime();
+	const CCPoint& direction = _joystick->getDirection();
+	const CCPoint& pos = getPosition();
+
+	float speed = _joystick->inMargin()? kSpeedWalk : kSpeedRun;
+
+	setPositionX(pos.x + direction.x*speed*dt);
+	setPositionY(pos.y + direction.y*speed*dt);
 }

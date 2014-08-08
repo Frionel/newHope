@@ -33,7 +33,7 @@ bool AppDelegate::applicationDidFinishLaunching()
     director->setAnimationInterval(1.0 / 60);
 
     // create a scene. it's an autorelease object
-    CCScene *pScene = TestMap::scene();//HelloWorld::scene();
+    CCScene *pScene = TestMap::scene();
 
     // run
     director->runWithScene(pScene);

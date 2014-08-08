@@ -11,7 +11,6 @@ LOCAL_SRC_FILES := hellocpp/main.cpp \
                    ../../Classes/Gameplay/TestMap.cpp \
                    ../../Classes/Gameplay/Player.cpp \
 				   ../../Classes/Gameplay/Camera.cpp \
-				   ../../Classes/Gameplay/GameMap.cpp \
                    ../../Classes/Gameplay/UI/HUD.cpp \
 				   ../../Classes/Gameplay/UI/Joystick.cpp 
 

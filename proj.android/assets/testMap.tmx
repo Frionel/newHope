@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" width="20" height="20" tilewidth="32" tileheight="32">
+<map version="1.0" orientation="orthogonal" width="25" height="20" tilewidth="32" tileheight="32">
  <tileset firstgid="1" name="testmap_tileset" tilewidth="32" tileheight="32">
   <image source="testmap_tileset.png" trans="ff00ff" width="256" height="256"/>
   <tile id="0">
@@ -48,49 +48,49 @@
    </properties>
   </tile>
  </tileset>
- <objectgroup name="events" width="20" height="20">
-  <object name="spawn" x="51" y="496">
+ <objectgroup name="events" width="25" height="20">
+  <object name="spawn" x="338" y="307">
    <properties>
     <property name="z" value="0"/>
    </properties>
   </object>
  </objectgroup>
- <layer name="terrain0" width="20" height="20">
+ <layer name="terrain0" width="25" height="20">
   <properties>
    <property name="terrain" value="1"/>
   </properties>
   <data encoding="base64" compression="zlib">
-   eJxjZGBgYBwAzATF+ORJMYcYPGoe6WbgM49cc9DNo9QceplHqf+HmvuolV6GSvyOFPOoiQHJkQKa
+   eJxjZGBgYBwkmAmK8clTajYxeNQO2thBirmk2kWp2fjso7ZZuNj0soMa8U0Pf+DK+9TwB7FxTqnZ9Eizo3YMHTtojQGJRQMN
   </data>
  </layer>
- <layer name="details0_1" width="20" height="20">
+ <layer name="details0_1" width="25" height="20">
   <data encoding="base64" compression="zlib">
-   eJxjYBgFgwGwkKBWDYjVgVgDB59e7qC1HTw0dcXwAaPhhAgD5LyAi00LgC1Nc+NQiy2+SI1DXHmIHvkXGQAAt74CqQ==
+   eJxjYBgFwxGwUKhfDYjVgVgDB5/agFL3DoS9PFRzxSggBYyGO2UAFn7IeRoXm16A2HzIjUMcW5qgRjrB5a6BKq8IAQCEVAKp
   </data>
  </layer>
- <layer name="details0_2" width="20" height="20">
+ <layer name="details0_2" width="25" height="20">
   <data encoding="base64" compression="zlib">
-   eJxjYBgFo2AUjIKhDVgG2gEjFAAADCAABQ==
+   eJxjYBgFo2AUjIJRMFIAy0A7YBTQDAAAD0AABQ==
   </data>
  </layer>
- <layer name="terrain1" width="20" height="20">
+ <layer name="terrain1" width="25" height="20">
   <data encoding="base64" compression="zlib">
-   eJxjYBgF6IANiNmBmAMHn1QgBsTiQCyBgz8KRsFQAZTmBXSAnBfkgFgeiBXQ2PQCzHS0a7gAAFFzAcw=
+   eJxjYBgF1ARsQMwOxBw4+NQAYkAsDsQSOPijYBSMAtoBWuRpdICcp+WAWB6IFdDYgw0wD7QDRgEDALtOAcw=
   </data>
  </layer>
- <layer name="details1_1" width="20" height="20">
+ <layer name="details1_1" width="25" height="20">
   <data encoding="base64" compression="zlib">
-   eJxjYBgFo2AUjALiAc8gN28U0A8AADOgABk=
+   eJxjYBgFo2AUjIJRQArgGSZ2jILhBQBBYAAZ
   </data>
  </layer>
- <layer name="terrain2" width="20" height="20">
+ <layer name="terrain2" width="25" height="20">
   <data encoding="base64" compression="zlib">
-   eJxjYBgFo2AUDEbABsTsQMxBJfP4gJgfiAWoZJ4YEIsDsQQQywGxPBArUMnsUTA0AADlAwDl
+   eJztzbERABAQBdGLECE6IvRfpa1AdqK/My9eM6WU+ltCRgl8VDT0wIdjYGJh4wT+lHp1AWoeAOU=
   </data>
  </layer>
- <layer name="terrain3" width="20" height="20">
+ <layer name="terrain3" width="25" height="20">
   <data encoding="base64" compression="zlib">
-   eJxjYBgFo2AUsAExOxBzUMk8PiDmB2KBQWqeGBCLA7EElcwbBSMTAADb3wC1
+   eJxjYBgFo2AUDEXABsTsQMxBQzv4gJgfiAWGuB1iQCwOxBI0tGMUjIKBBgBddgC1
   </data>
  </layer>
 </map>

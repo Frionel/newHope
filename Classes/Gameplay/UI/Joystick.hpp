@@ -26,7 +26,8 @@ public:
 	void touchEnded(CCTouch* pTouch);
 
 	bool isActive();
-	CCPoint getDirection();
+	const CCPoint& getDirection();
+	bool inMargin();
 
 private:
 	void init(Widget* widget);
@@ -38,8 +39,9 @@ private:
 	ImageView* _margin;
 	ImageView* _controller;
 
+	int _touchId;
 	CCPoint _direction;
-
+	bool _insideMargin;
 };
 
 #endif /* JOYSTICK_HPP_ */

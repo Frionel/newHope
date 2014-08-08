@@ -110,7 +110,7 @@
 		<link>
 			<name>Classes</name>
 			<type>2</type>
-			<locationURI>PROJECT_PATH/Classes</locationURI>
+			<location>D:/GitHub/NewProject/Classes</location>
 		</link>
 		<link>
 			<name>cocos2dx</name>

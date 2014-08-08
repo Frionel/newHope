@@ -22,7 +22,7 @@ private:
 	//
 	// Attributes
 	//
-	CCNode* _node;
+	CCNode* _map;
 	CCSize _screenSize;
 	float _marginLeft;
 	float _marginRight;

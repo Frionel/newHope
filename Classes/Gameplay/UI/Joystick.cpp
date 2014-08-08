@@ -11,7 +11,9 @@
 Joystick::Joystick(Widget* widget) :
 	_joystickNode(nullptr),
 	_margin(nullptr),
-	_controller(nullptr)
+	_controller(nullptr),
+	_insideMargin(true),
+	_touchId(-1)
 {
 	init(widget);
 }
@@ -36,6 +38,13 @@ void Joystick::init(Widget* widget)
 
 void Joystick::touchBegan(CCTouch* pTouch)
 {
+	if(_joystickNode->isVisible())
+	{
+		// Multitouch:
+		return;
+	}
+
+	_touchId = pTouch->getID();
 	CCPoint touchPos = _joystickNode->convertToNodeSpace(pTouch->getLocation());
 
 	_margin->setPosition(touchPos);
@@ -45,6 +54,12 @@ void Joystick::touchBegan(CCTouch* pTouch)
 
 void Joystick::touchMoved(CCTouch* pTouch)
 {
+	if(pTouch->getID() != _touchId)
+	{
+		// Multitouch:
+		return;
+	}
+
 	CCPoint joyPos = _margin->getPosition();
 	CCPoint touchPos = pTouch->getLocation();
 	CCPoint touchNodePos = _joystickNode->convertTouchToNodeSpace(pTouch);
@@ -56,6 +71,7 @@ void Joystick::touchMoved(CCTouch* pTouch)
 	{
 		// Inside the margin
 		_controller->setPosition(touchNodePos);
+		_insideMargin = true;
 	}
 	else
 	{
@@ -64,11 +80,18 @@ void Joystick::touchMoved(CCTouch* pTouch)
 
 		_controller->setPositionX(joyPos.x + radius*_direction.x);
 		_controller->setPositionY(joyPos.y + radius*_direction.y);
+		_insideMargin = false;
 	}
 }
 
 void Joystick::touchEnded(CCTouch* pTouch)
 {
+	if(pTouch->getID() != _touchId)
+	{
+		// Multitouch:
+		return;
+	}
+
 	_controller->setPosition(_margin->getPosition());
 	_joystickNode->setVisible(false);
 }
@@ -78,7 +101,12 @@ bool Joystick::isActive()
 	return _joystickNode->isVisible();
 }
 
-CCPoint Joystick::getDirection()
+const CCPoint& Joystick::getDirection()
 {
 	return _direction;
+}
+
+bool Joystick::inMargin()
+{
+	return _insideMargin;
 }
